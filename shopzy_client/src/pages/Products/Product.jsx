@@ -37,7 +37,7 @@ export default function Product({ product }) {
 
   return (
     <Link to={`/product/${product?._id}`} className="group">
-      <div className="relative w-full max-w-xs mx-auto bg-white rounded-3xl shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <div className="relative w-full max-w-xs mx-auto rounded-3xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-md">
         {/* Discount Badge */}
         {product?.discountPrice && (
           <div className="absolute top-3 left-3 bg-blue-500 text-white text-xs md:text-sm px-3 py-1 rounded-full z-10 shadow">

@@ -31,7 +31,7 @@ export default function OfferedProducts() {
       </div>
 
       {/* Timer + Products */}
-      <div className="flex flex-col lg:flex-row bg-red-200 items-center rounded-2xl p-6 lg:space-x-6 space-y-6 lg:space-y-0">
+      <div className="shadow-md flex flex-col lg:flex-row items-center rounded-2xl p-6 lg:space-x-6 space-y-6 lg:space-y-0">
         {/* Timer */}
         <div className="w-full lg:w-1/4 flex flex-col items-center justify-center">
           <h1 className="text-2xl md:text-3xl font-bold mb-6">

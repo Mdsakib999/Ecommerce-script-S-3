@@ -9,12 +9,12 @@ export default function Footer() {
         {/* Logo & Description */}
         <div className="space-y-4 pt-1 col-span-1 md:col-span-1 px-1">
           <Link to="/" className="mb-2">
-            <img className="w-48 sm:w-full" src={logo} alt="UniMart logo" />
+            <img className="w-20" src={logo} alt="shopzy logo" />
           </Link>
 
           <p className="text-sm">
             <span className="text-lg font-semibold">
-              UniMart Industries Ltd.
+              Shopzy Industries Ltd.
             </span>
             <br />
             <span className="opacity-60">
@@ -161,7 +161,7 @@ export default function Footer() {
       <div className="pt-10">
         <hr className="border-gray-700" />
         <p className="text-center text-sm opacity-60 pt-4">
-          UniMart © 2025 Demo Store. All Rights Reserved.
+          Shopzy © 2025 Store. All Rights Reserved.
         </p>
       </div>
     </footer>

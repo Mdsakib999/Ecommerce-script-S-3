@@ -40,7 +40,7 @@ export default function Products() {
   return (
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 p-4 mt-10">
       {/* Sidebar */}
-      <aside className="w-full md:w-64 mx-auto max-w-96 space-y-4">
+      <aside className="w-full md:w-72 mx-auto max-w-[96] space-y-4">
         {/* Search & Filter */}
         <div className="bg-white p-5 rounded-xl shadow-md border border-gray-300">
           <h3 className="text-lg font-bold tracking-tight mb-3">
@@ -54,7 +54,7 @@ export default function Products() {
             id="sort"
             value={sort}
             onChange={(e) => setSort(e.target.value)}
-            className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="cursor-pointer w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
           >
             <option value="price">Price — Low to High</option>
             <option value="-price">Price — High to Low</option>
@@ -73,7 +73,7 @@ export default function Products() {
             {categories.map((category) => (
               <label
                 key={category._id}
-                className="flex items-center gap-2 px-2 py-1 rounded border border-gray-200 bg-gray-50 cursor-pointer text-xs hover:bg-blue-50 transition"
+                className="flex items-center gap-2 p-2 rounded border border-gray-200 cursor-pointer text-xs hover:bg-blue-50 transition"
               >
                 <input
                   type="checkbox"
@@ -100,7 +100,7 @@ export default function Products() {
           </div>
           <button
             onClick={() => setSelectedCategories([])}
-            className={`mt-4 px-4 py-1.5 rounded bg-gray-600 text-white text-xs hover:bg-gray-500 transition`}
+            className={`cursor-pointer mt-4 px-4 py-1.5 rounded bg-gray-600 text-white text-xs hover:bg-gray-500 transition`}
           >
             Clear All
           </button>

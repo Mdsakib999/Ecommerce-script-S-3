@@ -63,15 +63,21 @@ const updateProduct = async (
   id: string,
   data: Partial<IProduct>
 ) => {
+  let finalImages: string[] = [];
+
+  if (req.body.existingImages) {
+    finalImages = JSON.parse(req.body.existingImages);
+  }
+
   if (req.files && Array.isArray(req.files)) {
     const files = req.files as Express.Multer.File[];
-
     const results = await Promise.all(
       files.map((file) => uploadToCloudinary(file.buffer, "products"))
     );
-
-    data.images = results.map((r) => r.url);
+    finalImages = [...finalImages, ...results.map((r) => r.url)];
   }
+
+  data.images = finalImages;
 
   return await Product.findByIdAndUpdate(id, data, {
     new: true,

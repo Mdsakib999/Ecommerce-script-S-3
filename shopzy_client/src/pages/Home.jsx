@@ -8,6 +8,7 @@ import RecommendedProduct from "../components/Home/RecommendedProduct";
 import Solution from "../components/Home/Solution";
 import TopBanner from "../components/Home/TopBanner";
 import toast from "react-hot-toast";
+import WhyChooseUs from "../components/Home/WhyChooseUs";
 
 export default function Home() {
   useEffect(() => {
@@ -34,6 +35,7 @@ export default function Home() {
         <Offer />
         <RecommendedProduct />
         <TopBanner />
+        <WhyChooseUs />
         <Solution />
       </div>
     </>

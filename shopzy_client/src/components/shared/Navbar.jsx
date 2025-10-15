@@ -274,7 +274,7 @@ export default function Navbar() {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <div className="flex items-center gap-3">
-              <Logo w={40} />
+              <Logo w={16} />
             </div>
             <button
               onClick={closeMobileMenu}

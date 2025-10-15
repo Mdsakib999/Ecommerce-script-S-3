@@ -31,7 +31,7 @@ export default function ProductTable({ products, onView, onEdit, onDelete }) {
                 <img
                   src={product.images?.[0]}
                   alt={product.name}
-                  className="w-12 h-12 object-cover rounded-lg border"
+                  className="w-12 h-12 object-cover rounded-lg shadow-md p-0.5"
                 />
               </td>
               <td className="py-4 px-6 font-medium text-gray-900">
