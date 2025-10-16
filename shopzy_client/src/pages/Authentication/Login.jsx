@@ -116,7 +116,7 @@ export default function Login() {
                 <input
                   type="email"
                   {...register("email", { required: "Email is required" })}
-                  className="w-full border border-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-shadow shadow-sm"
+                  className="w-full border border-slate-200 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow shadow-sm"
                   placeholder="you@company.com"
                 />
                 {errors.email && (
@@ -135,7 +135,7 @@ export default function Login() {
                   {...register("password", {
                     required: "Password is required",
                   })}
-                  className="w-full border border-slate-200 rounded-lg p-3 pr-12 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-shadow shadow-sm"
+                  className="w-full border border-slate-200 rounded-lg p-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow shadow-sm"
                   placeholder="••••••••"
                 />
                 <button
@@ -166,7 +166,7 @@ export default function Login() {
                 </div>
                 <Link
                   to="/"
-                  className="text-sm text-emerald-600 hover:underline"
+                  className="text-sm text-blue-600 hover:underline"
                 >
                   Forgot password?
                 </Link>
@@ -178,8 +178,8 @@ export default function Login() {
                   type="submit"
                   className={`w-full py-3 rounded-lg font-semibold text-white transition-shadow ${
                     isLoading
-                      ? "bg-emerald-300 cursor-not-allowed"
-                      : "bg-emerald-600 hover:bg-emerald-700 shadow-md"
+                      ? "bg-blue-300 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700 shadow-md"
                   }`}
                 >
                   {isLoading ? "Signing in..." : "Sign in"}
@@ -207,7 +207,7 @@ export default function Login() {
               Don't have an account?{" "}
               <Link
                 to="/register"
-                className="text-emerald-600 font-semibold hover:underline"
+                className="text-blue-600 font-semibold hover:underline"
               >
                 Create one
               </Link>

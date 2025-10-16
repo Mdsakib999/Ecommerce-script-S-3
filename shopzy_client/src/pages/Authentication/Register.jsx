@@ -110,7 +110,14 @@ export default function Register() {
               </label>
               <input
                 type="email"
-                {...register("email", { required: "Email is required" })}
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                    message:
+                      "Invalid email! Allowed format: example@domain.com (only letters, numbers, ., _, %, +, - are allowed)",
+                  },
+                })}
                 className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-black-400 outline-none transition"
                 placeholder="Enter your email"
               />

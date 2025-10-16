@@ -109,13 +109,13 @@ export default function Faq() {
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="mb-14 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-slate-900">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-slate-900">
             Frequently Asked
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600">
+            <span className="mt-1.5 block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600">
               Questions
             </span>
           </h1>
-          <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto">
             Find quick answers to common questions about our products, shipping,
             and services
           </p>
@@ -128,7 +128,7 @@ export default function Faq() {
             <div className="mb-8">
               <div className="relative mb-6">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-blue-100 rounded-2xl blur-lg opacity-60"></div>
-                <div className="relative bg-white rounded-2xl p-1 shadow-xl overflow-hidden">
+                <div className="relative bg-white rounded-2xl p-1 shadow-md overflow-hidden">
                   <img
                     src="https://t4.ftcdn.net/jpg/01/28/17/47/360_F_128174778_0XvhB1qi70yXNOPuUFzBNT85xKaWnVde.jpg"
                     alt="FAQ Illustration"
@@ -140,7 +140,7 @@ export default function Faq() {
 
             {/* Stats Cards */}
             <div className="grid grid-cols-1 gap-4">
-              <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border border-blue-100 hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center text-white">
                     <Package size={20} />
@@ -156,7 +156,7 @@ export default function Faq() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border border-blue-100 hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center text-white">
                     <CheckCircle size={20} />
@@ -172,7 +172,7 @@ export default function Faq() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md border border-blue-100 hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center text-white">
                     <Headphones size={20} />
@@ -191,20 +191,20 @@ export default function Faq() {
           </div>
 
           {/* Right Column - Accordion */}
-          <div className="lg:col-span-3 space-y-3">
+          <div className="lg:col-span-3 space-y-4">
             {faqs.map((faq, index) => {
               const IconComponent = faq.icon;
               const isOpen = openIndex === index;
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-xl shadow-md border border-blue-100 overflow-hidden hover:shadow-lg transition-all duration-300 group"
+                  className="bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition-all duration-300 group"
                 >
                   <button
                     className="w-full cursor-pointer flex justify-between items-start gap-4 px-5 sm:px-6 py-4 sm:py-5 font-semibold focus:outline-none transition-all duration-200 text-left"
                     onClick={() => toggleFaq(index)}
                   >
-                    <div className="flex items-start gap-3 flex-1 min-w-0">
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
                       <div
                         className={`flex-shrink-0 mt-0.5 p-2 rounded-lg transition-all duration-200 ${
                           isOpen

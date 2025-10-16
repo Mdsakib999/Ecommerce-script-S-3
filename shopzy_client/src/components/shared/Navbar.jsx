@@ -39,7 +39,6 @@ export default function Navbar() {
   const [logout] = useLogoutMutation();
   const dispatch = useDispatch();
 
-  // Handle user picture loading
   useEffect(() => {
     if (!user?.picture) return;
     const img = new Image();
@@ -48,7 +47,6 @@ export default function Navbar() {
     img.onerror = () => setIsPictureLoaded(false);
   }, [user?.picture]);
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (!e.target.closest(".dropdown-container")) {
@@ -66,7 +64,6 @@ export default function Navbar() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
     return () => {
@@ -80,6 +77,7 @@ export default function Navbar() {
     dispatch(clearCart());
     setIsMobileMenuOpen(false);
     setIsUserDropdownOpen(false);
+    setIsPictureLoaded(false);
     toast.success("Logged out successfully", { position: "bottom-right" });
   };
 

@@ -1,8 +1,8 @@
 import { Request } from "express";
 import { QueryBuilder } from "../../utils/QueryBuilder";
+import { uploadToCloudinary } from "../../utils/uploadToCloudinary";
 import { IProduct } from "./product.interface";
 import Product from "./product.model";
-import { uploadToCloudinary } from "../../utils/uploadToCloudinary";
 
 const createProduct = async (req: Request, data: Partial<IProduct>) => {
   if (req.files && Array.isArray(req.files)) {

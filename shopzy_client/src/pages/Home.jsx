@@ -30,9 +30,9 @@ export default function Home() {
       <div className="space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-16">
         <Banner />
         <Featured />
+        <Offer />
         <OfferedProducts />
         <PopularProduct />
-        <Offer />
         <RecommendedProduct />
         <TopBanner />
         <WhyChooseUs />

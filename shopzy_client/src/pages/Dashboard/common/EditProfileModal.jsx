@@ -7,7 +7,6 @@ import toast from "react-hot-toast";
 export default function EditProfileModal({
   editProfile,
   editImage,
-  // loginMethod,
   openModal,
   setOpenModal,
   setEditImage,
@@ -67,7 +66,6 @@ export default function EditProfileModal({
   const onSubmit = async (data) => {
     const formData = new FormData();
 
-    // Only append editable fields
     if (data.name) formData.append("name", data.name);
     if (data.phone) formData.append("phone", data.phone);
     if (data.address) formData.append("address", data.address);

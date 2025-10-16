@@ -44,12 +44,12 @@ const Offer = () => {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-16">
       {/* Header */}
-      <div className="flex justify-between items-center mb-10">
-        <h2 className="text-3xl font-bold text-gray-900">
+      <div className="flex flex-col-reverse gap-y-2 sm:flex-row justify-between items-center mb-10">
+        <h2 className="text-md md:text-xl lg:text-3xl font-bold text-gray-900">
           🔥 Exclusive Offers for You
         </h2>
         <Link to="/products">
-          <p className="underline cursor-pointer text-md md:text-lg font-semibold text-blue-600 hover:text-blue-800">
+          <p className="underline cursor-pointer text-xs md:text-md lg:text-lg font-semibold text-blue-600 hover:text-blue-800">
             View All Products
           </p>
         </Link>

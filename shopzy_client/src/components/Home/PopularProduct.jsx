@@ -42,12 +42,14 @@ export default function PopularProduct() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4 mt-10">
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 mb-6">
-        <h2 className="text-2xl md:text-4xl font-semibold">Popular Products</h2>
+      <div className="flex flex-col-reverse gap-y-2 sm:flex-row justify-between items-center mb-10">
+        <h2 className="text-md md:text-xl lg:text-3xl font-bold text-gray-900">
+          Popular Products
+        </h2>
         <Link to={"/products"}>
-          <p className="underline cursor-pointer text-md md:text-lg font-semibold">
+          <p className="underline cursor-pointer text-xs md:text-md lg:text-lg font-semibold text-blue-600 hover:text-blue-800">
             View All Products
           </p>
         </Link>
