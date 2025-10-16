@@ -254,10 +254,10 @@ const Featured = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-4">
               <TrendingUp className="text-blue-600" size={28} />
             </div>
-            <div className="text-xl md:text-4xl font-bold text-slate-900 mb-2">
+            <div className="text-sm md:text-lg lg:text-xl font-bold text-slate-900 mb-2">
               <Countup>150</Countup>+
             </div>
-            <div className="text-slate-600 font-medium text-sm md:text-4xl">
+            <div className="text-slate-600 font-medium text-sm md:text-lg lg:text-xl">
               Premium Products
             </div>
           </div>
@@ -266,10 +266,10 @@ const Featured = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-2xl mb-4">
               <Sparkles className="text-emerald-600" size={28} />
             </div>
-            <div className="text-xl md:text-4xl font-bold text-slate-900 mb-2">
+            <div className="text-sm md:text-lg lg:text-xl font-bold text-slate-900 mb-2">
               <Countup>8</Countup>
             </div>
-            <div className="text-slate-600 font-medium text-sm md:text-4xl">
+            <div className="text-slate-600 font-medium text-sm md:text-lg lg:text-xl">
               Categories
             </div>
           </div>
@@ -278,10 +278,10 @@ const Featured = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 rounded-2xl mb-4">
               <Award className="text-amber-600" size={28} />
             </div>
-            <div className="text-xl md:text-4xl font-bold text-slate-900 mb-2">
+            <div className="text-sm md:text-lg lg:text-xl font-bold text-slate-900 mb-2">
               <Countup>50</Countup>+
             </div>
-            <div className="text-slate-600 font-medium text-sm md:text-4xl">
+            <div className="text-slate-600 font-medium text-sm md:text-lg lg:text-xl">
               Top Brands
             </div>
           </div>
@@ -290,10 +290,10 @@ const Featured = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-rose-100 rounded-2xl mb-4">
               <Users className="text-rose-600" size={28} />
             </div>
-            <div className="text-xl md:text-4xl font-bold text-slate-900 mb-2">
+            <div className="text-sm md:text-lg lg:text-xl font-bold text-slate-900 mb-2">
               <Countup>4.8</Countup>★
             </div>
-            <div className="text-slate-600 font-medium text-sm md:text-4xl">
+            <div className="text-slate-600 font-medium text-sm md:text-lg lg:text-xl">
               Customer Rating
             </div>
           </div>

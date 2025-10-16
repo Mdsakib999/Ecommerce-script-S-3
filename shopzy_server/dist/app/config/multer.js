@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleUpload = exports.upload = void 0;
 const multer_1 = __importDefault(require("multer"));
 const storage = multer_1.default.memoryStorage();
-const fileFilter = (req, file, cb) => {
+const fileFilter = (_req, file, cb) => {
     if (file.mimetype.startsWith("image/")) {
         cb(null, true);
     }
