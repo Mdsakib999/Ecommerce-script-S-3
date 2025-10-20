@@ -1,6 +1,5 @@
 import {
   ChevronDown,
-  Heart,
   HelpCircle,
   Home,
   Info,

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Upload, X, ImageIcon, Plus, Trash2 } from "lucide-react";
 import toast from "react-hot-toast";
+import confirmToast from "../../../utils/confirmToast";
 import {
   useAddOfferMutation,
   useUpdateOfferMutation,
@@ -17,7 +18,6 @@ export default function AddOffer() {
   const [updateOffer, { isLoading: updating }] = useUpdateOfferMutation();
   const [deleteOffers, { isLoading: deleting }] = useDeleteOffersMutation();
 
-  // Load existing offer images on mount
   useEffect(() => {
     const offer = offersData?.data?.[0];
     if (offer?.images) {
@@ -33,13 +33,14 @@ export default function AddOffer() {
     }
   }, [offersData]);
 
-  // Handle file selection
   const handleFileSelect = (event) => {
     const files = Array.from(event.target.files || []);
     if (images.length + files.length > 4) {
-      toast.error("Maximum 4 images allowed", {
-        className: "font-serif text-center",
-      });
+      toast.error(
+        <h1 className="font-montserrat text-center">
+          Maximum 4 images allowed
+        </h1>
+      );
       event.target.value = "";
       return;
     }
@@ -73,7 +74,7 @@ export default function AddOffer() {
   const handleUpload = async () => {
     if (images.length === 0) {
       toast.error("Please select at least one image", {
-        className: "font-serif text-center",
+        className: "font- text-center",
       });
       return;
     }
@@ -99,16 +100,18 @@ export default function AddOffer() {
           images: formData,
         }).unwrap();
         toast.success("Offer updated successfully!", {
-          className: "font-serif text-center",
+          className: "font-montserrat text-center",
         });
       } else {
         await addOffer(formData).unwrap();
         toast.success("Offer added successfully!", {
-          className: "font-serif text-center",
+          className: "font-montserrat text-center",
         });
       }
     } catch {
-      toast.error("Upload failed", { className: "font-serif text-center" });
+      toast.error("Upload failed", {
+        className: "font-montserrat text-center",
+      });
     }
   };
 
@@ -119,17 +122,17 @@ export default function AddOffer() {
       await deleteOffers(offersData.data[0]._id).unwrap();
       setImages([]);
       toast.success("All offers deleted.", {
-        className: "font-serif text-center",
+        className: "font-montserrat text-center",
       });
     } catch {
       toast.error("Failed to delete offers.", {
-        className: "font-serif text-center",
+        className: "font-montserrat text-center",
       });
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100 p-6 mt-20 md:mt-10 lg:mt-0 font-serif">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100 p-6 mt-20 md:mt-10 lg:mt-0 font-montserrat">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col justify-center items-center p-8 mb-8">
@@ -192,16 +195,22 @@ export default function AddOffer() {
           <div className="mt-8 flex flex-col md:flex-row gap-4">
             <button
               onClick={handleUpload}
-              disabled={adding || updating || images.length === 0}
-              className="w-full bg-yellow-500 text-white font-bold py-4 px-6 rounded-xl hover:bg-yellow-600 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              disabled={adding || updating || deleting || images.length === 0}
+              className="cursor-pointer w-full bg-blue-500 text-white font-bold py-4 px-6 rounded-xl hover:bg-blue-600 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               <Upload className="w-5 h-5" />
               Save Images {images.length > 0 && `(${images.length})`}
             </button>
             <button
-              onClick={handleDeleteAll}
-              disabled={deleting || images.length === 0}
-              className="w-full bg-red-500 text-white font-bold py-4 px-6 rounded-xl hover:bg-red-600 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              onClick={() => {
+                confirmToast({
+                  message:
+                    "Are you sure you want to delete all offers? This action cannot be undone.",
+                  onConfirm: handleDeleteAll,
+                });
+              }}
+              disabled={adding || updating || deleting || images.length === 0}
+              className="cursor-pointer w-full bg-red-500 text-white font-bold py-4 px-6 rounded-xl hover:bg-red-600 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               <Trash2 className="w-5 h-5" />
               Delete All Offers
