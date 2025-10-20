@@ -219,7 +219,7 @@ export default function Navbar() {
                       <>
                         <div className="px-4 py-3 border-b border-gray-100">
                           <p className="text-sm text-gray-500">
-                            Welcome to UniMart
+                            Welcome to ShopZy
                           </p>
                           <p className="text-sm font-semibold text-gray-800">
                             Sign in to your account
@@ -249,7 +249,7 @@ export default function Navbar() {
 
           {/* Mobile Search Bar */}
           <div className="lg:hidden px-1 pb-4">
-            <SearchBar placeholder="Search UniMart..." />
+            <SearchBar placeholder="Search shopZy..." />
           </div>
         </div>
       </nav>
@@ -315,7 +315,7 @@ export default function Navbar() {
             ) : (
               <div className="p-4 bg-blue-50 border-b border-gray-200">
                 <p className="font-medium text-blue-900 mb-2">
-                  Welcome to UniMart
+                  Welcome to Shopzy
                 </p>
                 <div className="flex gap-2">
                   <Link

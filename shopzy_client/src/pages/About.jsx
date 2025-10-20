@@ -42,7 +42,7 @@ export default function About() {
             Our Mission
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            At UniMart, we are committed to making online shopping simple,
+            At Shopzy, we are committed to making online shopping simple,
             enjoyable, and trustworthy. Our mission is to deliver high-quality
             products directly to your doorstep while providing exceptional
             customer service. Every item is carefully selected for quality,
