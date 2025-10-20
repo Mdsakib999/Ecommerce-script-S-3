@@ -1,168 +1,307 @@
-import { Facebook, Youtube, Instagram, Twitter } from "lucide-react";
-import logo from "../../assets/footerLogo.png";
+import {
+  Facebook,
+  Youtube,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 import { Link } from "react-router";
+import logo from "../../assets/footerLogo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white px-6 py-10 ">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8 md:gap-8 lg:gap-0 text-left px-2">
-        {/* Logo & Description */}
-        <div className="space-y-4 pt-1 col-span-1 md:col-span-1 px-1">
-          <Link to="/" className="mb-2">
-            <img className="w-20" src={logo} alt="shopzy logo" />
-          </Link>
+    <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+          {/* Brand Section - Takes more space */}
+          <div className="lg:col-span-4 space-y-5">
+            <Link to="/" className="inline-block">
+              <img src={logo} className="w-24" alt="shopzy logo" />
+            </Link>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                Shopzy Industries Ltd.
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Your trusted partner in online shopping since 1992. We deliver
+                quality products with exceptional service.
+              </p>
+            </div>
 
-          <p className="text-sm">
-            <span className="text-lg font-semibold">
-              Shopzy Industries Ltd.
-            </span>
-            <br />
-            <span className="opacity-60">
-              Providing reliable tech since 1992
-            </span>
-          </p>
-        </div>
-
-        {/* Services */}
-        <div className="md:pl-10">
-          <h6 className="font-semibold mb-4 text-lg">Services</h6>
-          <ul className="space-y-2 text-sm opacity-70">
-            <li>
-              <a href="#" className="hover:underline">
-                Branding
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Design
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Marketing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Advertisement
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Company */}
-        <div className="md:pl-10">
-          <h6 className="font-semibold mb-4 text-lg">Company</h6>
-          <ul className="space-y-2 text-sm opacity-70">
-            <li>
-              <a href="#" className="hover:underline">
-                About us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Jobs
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Press kit
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Legal */}
-        <div>
-          <h6 className="font-semibold mb-4 text-lg">Legal</h6>
-          <ul className="space-y-2 text-sm opacity-70">
-            <li>
-              <a href="#" className="hover:underline">
-                Terms of use
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Privacy policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Cookie policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Marketing policy
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Newsletter / Social → span 2 cols */}
-        <div className="md:col-span-2">
-          <h6 className="font-semibold mb-4 text-lg">
-            Subscribe to our newsletter
-          </h6>
-          <form className="space-y-3">
-            <div className="w-full max-w-lg mx-auto">
-              <div className="flex items-center bg-gray-900 rounded-full shadow-md overflow-hidden border border-gray-700 w-full">
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  placeholder="Your email address"
-                  className="flex-1 min-w-0 bg-transparent text-gray-100 placeholder-gray-500 px-5 py-3 text-sm focus:ring-0 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="flex-shrink-0 bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 font-semibold text-sm rounded-full transition-all duration-300"
-                >
-                  Subscribe
-                </button>
+            {/* Contact Info */}
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center gap-2 text-gray-400">
+                <Phone size={16} className="flex-shrink-0" />
+                <span>+880 1234-567890</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-400">
+                <Mail size={16} className="flex-shrink-0" />
+                <span>support@shopzy.com</span>
+              </div>
+              <div className="flex items-start gap-2 text-gray-400">
+                <MapPin size={16} className="flex-shrink-0 mt-0.5" />
+                <span>123 Commerce Street, Dhaka, Bangladesh</span>
               </div>
             </div>
+          </div>
 
-            <div className="flex space-x-3 pt-2">
-              <a
-                href="#"
-                className="border-2 border-gray-600 hover:border-blue-500 bg-gray-900 text-gray-200 hover:bg-blue-500 hover:text-white duration-300 rounded-full p-2"
-              >
-                <Facebook size={22} />
-              </a>
-              <a
-                href="#"
-                className="border-2 border-gray-600 hover:border-red-500 bg-gray-900 text-gray-200 hover:bg-red-500 hover:text-white duration-300 rounded-full p-2"
-              >
-                <Youtube size={22} />
-              </a>
-              <a
-                href="#"
-                className="border-2 border-gray-600 hover:border-blue-400 bg-gray-900 text-gray-200 hover:bg-blue-400 hover:text-white duration-300 rounded-full p-2"
-              >
-                <Twitter size={22} />
-              </a>{" "}
-              <a
-                href="#"
-                className="border-2 border-gray-600 hover:border-rose-500 bg-gray-900 text-gray-200 hover:bg-rose-500 hover:text-white duration-300 rounded-full p-2"
-              >
-                <Instagram size={22} />
-              </a>
+          {/* Quick Links */}
+          <div className="lg:col-span-2">
+            <h6 className="font-semibold mb-4 text-base uppercase tracking-wider text-gray-300">
+              Shop
+            </h6>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  New Arrivals
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Best Sellers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Special Offers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Gift Cards
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Customer Service */}
+          <div className="lg:col-span-2">
+            <h6 className="font-semibold mb-4 text-base uppercase tracking-wider text-gray-300">
+              Customer Service
+            </h6>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Shipping Info
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Returns & Exchanges
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Track Order
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div className="lg:col-span-2">
+            <h6 className="font-semibold mb-4 text-base uppercase tracking-wider text-gray-300">
+              Company
+            </h6>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Press
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Affiliates
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div className="lg:col-span-2">
+            <h6 className="font-semibold mb-4 text-base uppercase tracking-wider text-gray-300">
+              Legal
+            </h6>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Accessibility
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Newsletter Section */}
+        <div className="mt-12 pt-12 border-t border-gray-800">
+          <div className="max-w-2xl w-full mx-auto">
+            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
+            <p className="text-gray-400 text-sm mb-4">
+              Subscribe to our newsletter for exclusive offers and latest
+              updates.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 bg-gray-800 border border-gray-700 text-white placeholder-gray-500 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+              />
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-medium text-sm rounded-lg transition-colors duration-200 whitespace-nowrap">
+                Subscribe
+              </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
 
-      <div className="pt-10">
-        <hr className="border-gray-700" />
-        <p className="text-center text-sm opacity-60 pt-4">
-          Shopzy © 2025 Store. All Rights Reserved.
-        </p>
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-400 text-center md:text-left">
+              © 2025 Shopzy Industries Ltd. All rights reserved.
+            </p>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-gray-400 mr-2">Follow us:</span>
+              <a
+                href="#"
+                className="bg-gray-800 hover:bg-blue-600 text-gray-400 hover:text-white transition-all duration-200 rounded-full p-2"
+                aria-label="Facebook"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="#"
+                className="bg-gray-800 hover:bg-red-600 text-gray-400 hover:text-white transition-all duration-200 rounded-full p-2"
+                aria-label="YouTube"
+              >
+                <Youtube size={18} />
+              </a>
+              <a
+                href="#"
+                className="bg-gray-800 hover:bg-blue-400 text-gray-400 hover:text-white transition-all duration-200 rounded-full p-2"
+                aria-label="Twitter"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="#"
+                className="bg-gray-800 hover:bg-pink-600 text-gray-400 hover:text-white transition-all duration-200 rounded-full p-2"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+            </div>
+
+            {/* Payment Methods */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-400">Secure Payment:</span>
+              <div className="flex gap-x-2">
+                <div className="bg-gray-800 px-2 py-1 rounded text-xs text-gray-200 shadow-sm shadow-white">
+                  VISA
+                </div>
+                <div className="bg-gray-800 px-2 py-1 rounded text-xs text-gray-200 shadow-sm shadow-white">
+                  MC
+                </div>
+                <div className="bg-gray-800 px-2 py-1 rounded text-xs text-gray-200 shadow-sm shadow-white">
+                  AMEX
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

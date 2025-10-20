@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: envVariables.FRONTEND_URL,
+    origin: [envVariables.FRONTEND_URL as string, "http://localhost:5173"],
     credentials: true,
   })
 );

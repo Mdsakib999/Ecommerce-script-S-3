@@ -1,6 +1,8 @@
 import Countup from "../components/shared/Countup";
 import AboutSection from "../components/shared/AboutSection";
 import { TrendingUp, Award, Users, MapPin, CheckCircle } from "lucide-react";
+import salesImage from "../assets/about-image-2.jpg";
+import bannerImage from "../assets/about_us.png";
 
 // eslint-disable-next-line no-unused-vars
 function StatsCard({ icon: Icon, number, label, delay }) {
@@ -25,26 +27,13 @@ function StatsCard({ icon: Icon, number, label, delay }) {
 }
 
 export default function About() {
-  const banner =
-    "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=650&fit=crop";
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner */}
       <div
-        className="relative h-96 md:h-[600px] bg-cover bg-center flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-            About Shopzy
-          </h1>
-          <p className="text-lg md:text-xl tracking-widest opacity-90">
-            WE CAN DO MORE FOR YOU
-          </p>
-        </div>
-      </div>
+        className="relative h-96 md:h-[85vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
+        style={{ backgroundImage: `url(${bannerImage})` }}
+      ></div>
 
       {/* Mission Statement */}
       <div className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
@@ -104,7 +93,7 @@ export default function About() {
           preHeading="OUR STORY"
           heading="Creative and Innovative Fashion Trends"
           normalText="We started with a simple vision: to make quality products accessible to everyone. Over the years, we've grown into a trusted name in e-commerce, serving thousands of customers across the nation. Our commitment to excellence remains unwavering, and we continue to innovate and improve every day."
-          image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+          image={salesImage}
           reverse={false}
         />
       </div>

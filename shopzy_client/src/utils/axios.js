@@ -1,8 +1,7 @@
 import axios from "axios";
-import { envConfig } from "../config/config";
 
 export const axiosInstance = axios.create({
-  baseURL: envConfig.baseURL,
+  baseURL: import.meta.env.VITE_SERVER_URL,
   withCredentials: true,
 });
 
@@ -22,7 +21,6 @@ const processQueue = (error) => {
   pendingQueue = [];
 };
 
-// Add a response interceptor
 axiosInstance.interceptors.response.use(
   (response) => {
     return response;
