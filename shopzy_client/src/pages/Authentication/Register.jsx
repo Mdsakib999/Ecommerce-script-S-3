@@ -199,7 +199,7 @@ export default function Register() {
               onClick={handleGoogleLogin}
               type="submit"
               disabled={isGoogleLoading}
-              className={`flex items-center justify-center w-full gap-3 px-4 py-3 rounded-xl font-medium transition-colors duration-200 ${
+              className={`cursor-pointer flex items-center justify-center w-full gap-3 px-4 py-3 rounded-xl font-medium transition-colors duration-200 ${
                 isGoogleLoading
                   ? "bg-gray-300 cursor-not-allowed text-gray-500"
                   : "bg-white text-gray-800 hover:bg-gray-100 border border-gray-300"

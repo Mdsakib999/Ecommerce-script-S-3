@@ -38,7 +38,7 @@ app.use("/api/v1", router);
 
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Welcome to Unimart backend",
+    message: "Welcome to Shopzy API",
   });
 });
 

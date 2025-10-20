@@ -68,7 +68,7 @@ passport.use(
     {
       clientID: envVariables.GOOGLE_CLIENT_ID as string,
       clientSecret: envVariables.GOOGLE_CLIENT_SECRET as string,
-      callbackURL: envVariables.GOOGLE_CALLBACK_URL,
+      callbackURL: envVariables.GOOGLE_CALLBACK_URL as string,
     },
     async (
       _accessToken: string,

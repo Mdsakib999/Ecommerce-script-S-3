@@ -94,7 +94,7 @@ export default function Login() {
       </div>
 
       <div className="relative w-full max-w-xl mx-auto">
-        <div className="py-16 rounded-2xl flex items-center justify-center bg-white">
+        <div className="py-16 px-8 md:px-0 rounded-2xl flex items-center justify-center bg-white">
           <div className="w-full max-w-md">
             <div className="flex items-center gap-3 mb-6">
               <Logo w="14" />
@@ -136,12 +136,12 @@ export default function Login() {
                     required: "Password is required",
                   })}
                   className="w-full border border-slate-200 rounded-lg p-3 pr-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow shadow-sm"
-                  placeholder="••••••••"
+                  placeholder="********"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-9 text-slate-400 hover:text-slate-600"
+                  className="absolute right-3 top-11 text-slate-400 hover:text-slate-600"
                   aria-label="Toggle password visibility"
                 >
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -176,7 +176,7 @@ export default function Login() {
                 <button
                   disabled={isLoading || isGoogleLoading}
                   type="submit"
-                  className={`w-full py-3 rounded-lg font-semibold text-white transition-shadow ${
+                  className={`cursor-pointer w-full py-3 rounded-lg font-semibold text-white transition-shadow ${
                     isLoading
                       ? "bg-blue-300 cursor-not-allowed"
                       : "bg-blue-600 hover:bg-blue-700 shadow-md"
@@ -189,7 +189,7 @@ export default function Login() {
                   onClick={handleGoogleLogin}
                   type="button"
                   disabled={isGoogleLoading || isLoading}
-                  className={`flex items-center justify-center gap-3 w-full py-3 rounded-lg border transition-colors ${
+                  className={`cursor-pointer flex items-center justify-center gap-3 w-full py-3 rounded-lg border transition-colors ${
                     isGoogleLoading
                       ? "bg-slate-100 cursor-not-allowed text-slate-400 border-slate-200"
                       : "bg-white text-slate-700 border-slate-200 hover:shadow-sm"

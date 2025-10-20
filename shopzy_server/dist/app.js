@@ -31,7 +31,7 @@ app.use((0, cors_1.default)({
 app.use("/api/v1", router_1.router);
 app.get("/", (req, res) => {
     res.status(200).json({
-        message: "Welcome to Unimart backend",
+        message: "Welcome to Shopzy API",
     });
 });
 app.use(globalErrorHandler_1.globalErrorHandler);

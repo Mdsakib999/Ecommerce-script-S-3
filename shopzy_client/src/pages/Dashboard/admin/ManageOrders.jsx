@@ -194,7 +194,7 @@ export default function ManageOrders() {
             <div className="flex justify-between items-start mb-3">
               <div>
                 <h3 className="font-semibold text-blue-600 text-sm">
-                  # {order.transactionId}
+                  {order.transactionId}
                 </h3>
                 <p className="text-xs text-gray-500">
                   {new Date(order.createdAt).toLocaleDateString()}
@@ -226,7 +226,7 @@ export default function ManageOrders() {
               </div>
               <div>
                 <p className="text-gray-500">Total</p>
-                <p className="font-semibold">${order.total?.toFixed(2)}</p>
+                <p className="font-semibold">Tk {order.total?.toFixed(2)}</p>
               </div>
               <div className="col-span-2">
                 <p className="text-gray-500">Payment</p>
@@ -303,7 +303,7 @@ export default function ManageOrders() {
             {filteredOrders.map((order) => (
               <tr key={order._id} className="hover:bg-gray-50">
                 <td className="py-3 px-4 font-semibold text-blue-600">
-                  # {order.transactionId}
+                  {order.transactionId}
                 </td>
                 <td className="py-3 px-4">
                   <div className="font-medium text-gray-900">{order.name}</div>
@@ -334,7 +334,7 @@ export default function ManageOrders() {
                   {order.orders?.length !== 1 ? "s" : ""}
                 </td>
                 <td className="py-3 px-4 font-semibold text-gray-900">
-                  ${order.total?.toFixed(2)}
+                  Tk {order.total?.toFixed(2)}
                 </td>
                 <td className="py-3 px-4 text-gray-600">
                   {order.paymentMethod}
