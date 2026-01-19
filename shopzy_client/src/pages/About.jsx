@@ -2,7 +2,7 @@ import Countup from "../components/shared/Countup";
 import AboutSection from "../components/shared/AboutSection";
 import { TrendingUp, Award, Users, MapPin, CheckCircle } from "lucide-react";
 import salesImage from "../assets/about-image-2.jpg";
-import bannerImage from "../assets/about_us.png";
+import bannerImage from "../assets/shop.jpg";
 
 // eslint-disable-next-line no-unused-vars
 function StatsCard({ icon: Icon, number, label, delay }) {
@@ -29,26 +29,34 @@ function StatsCard({ icon: Icon, number, label, delay }) {
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Banner */}
-      <div
-        className="relative h-96 md:h-[85vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: `url(${bannerImage})` }}
-      ></div>
-
       {/* Mission Statement */}
-      <div className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Our Mission
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            At ZyloCart, we are committed to making online shopping simple,
-            enjoyable, and trustworthy. Our mission is to deliver high-quality
-            products directly to your doorstep while providing exceptional
-            customer service. Every item is carefully selected for quality,
-            value, and style. We aim to build a community where customers feel
-            supported, valued, and inspired.
-          </p>
+      <div className="bg-gradient-to-b from-white to-blue-50">
+        <div className="relative w-full">
+          <img
+            src={bannerImage}
+            alt="Our Mission"
+            className="w-full object-cover min-h-[50vh]"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/50" />
+
+          {/* Text Content */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="max-w-4xl px-4 sm:px-6 text-center text-white">
+              <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold mb-6">
+                Our Mission
+              </h2>
+              <p className="text-xs md:text-sm lg:text-lg leading-relaxed">
+                At ZyloCart, we are committed to making online shopping simple,
+                enjoyable, and trustworthy. Our mission is to deliver
+                high-quality products directly to your doorstep while providing
+                exceptional customer service. Every item is carefully selected
+                for quality, value, and style. We aim to build a community where
+                customers feel supported, valued, and inspired.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
