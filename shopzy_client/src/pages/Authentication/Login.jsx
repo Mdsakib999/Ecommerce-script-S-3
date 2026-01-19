@@ -63,7 +63,7 @@ export default function Login() {
           <h1 className="font-serif">Your account is not verified</h1>,
           {
             position: "bottom-right",
-          }
+          },
         );
       } else if (
         errorMessage === "You have authenticated through Google login!"
@@ -72,7 +72,7 @@ export default function Login() {
           <h1 className="font-serif">You are authenticated through Google!</h1>,
           {
             position: "bottom-right",
-          }
+          },
         );
       } else {
         toast.error(<h1 className="font-serif">{errorMessage}</h1>, {
@@ -103,7 +103,7 @@ export default function Login() {
                   Welcome back
                 </h2>
                 <p className="text-sm text-slate-500">
-                  Sign in to continue to shopzy
+                  Sign in to continue to ZyloCart
                 </p>
               </div>
             </div>

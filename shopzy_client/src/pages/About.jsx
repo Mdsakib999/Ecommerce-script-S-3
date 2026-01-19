@@ -42,7 +42,7 @@ export default function About() {
             Our Mission
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            At Shopzy, we are committed to making online shopping simple,
+            At ZyloCart, we are committed to making online shopping simple,
             enjoyable, and trustworthy. Our mission is to deliver high-quality
             products directly to your doorstep while providing exceptional
             customer service. Every item is carefully selected for quality,
@@ -56,7 +56,7 @@ export default function About() {
       <div className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16">
-            Why Choose Shopzy
+            Why Choose ZyloCart
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <StatsCard

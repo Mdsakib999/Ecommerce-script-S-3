@@ -40,7 +40,7 @@ export default function Register() {
           </h1>,
           {
             position: "bottom-right",
-          }
+          },
         );
         reset({
           name: "",
@@ -56,7 +56,7 @@ export default function Register() {
           <p className="text-center font-serif">
             {result.error?.data?.message}
           </p>,
-          { position: "bottom-right" }
+          { position: "bottom-right" },
         );
       }
     } catch (error) {
@@ -80,7 +80,7 @@ export default function Register() {
             Create your account
           </h1>
           <p className="text-gray-500 mb-8 text-sm">
-            Join Shopzy and start shopping with ease
+            Join ZyloCart and start shopping with ease
           </p>
 
           {/* Form */}

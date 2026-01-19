@@ -91,7 +91,9 @@ const DashboardSidebar = ({
           isCollapsed ? "justify-center" : "justify-between"
         }`}
       >
-        {!isCollapsed && <Logo w="20 h-16" />}
+        <div className="text-center w-full">
+          {!isCollapsed && <Logo w="14 h-16 mx-auto" />}
+        </div>
         <button
           onClick={() => setCollapsed((s) => !s)}
           className="p-1 rounded hover:bg-gray-100"
@@ -114,7 +116,7 @@ const DashboardSidebar = ({
               item={item}
               isCollapsed={isCollapsed}
               isActive={location.pathname.startsWith(
-                `${basePath}/${item.path}`
+                `${basePath}/${item.path}`,
               )}
               onClick={handleLinkClick}
             />
@@ -178,7 +180,7 @@ export default function DashboardLayout() {
     dispatch(clearCart());
     toast.success(
       <h1 className="font-serif text-center">Logged out successfully</h1>,
-      { position: "bottom-right" }
+      { position: "bottom-right" },
     );
   };
 

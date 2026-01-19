@@ -16,7 +16,7 @@ app.use(
     secret: envVariables.EXPRESS_SESSION_SECRET as string,
     resave: false,
     saveUninitialized: false,
-  })
+  }),
 );
 
 app.use(passport.initialize());
@@ -31,14 +31,14 @@ app.use(
   cors({
     origin: [envVariables.FRONTEND_URL as string, "http://localhost:5173"],
     credentials: true,
-  })
+  }),
 );
 
 app.use("/api/v1", router);
 
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Welcome to Shopzy API",
+    message: "Welcome to ZyloCart API",
   });
 });
 

@@ -1,7 +1,17 @@
 import { MapPin } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 export default function SubHeader() {
+  const { pathname } = useLocation();
+
+  const links = [
+    { to: "/products", label: "All Products" },
+    { to: "/about", label: "About" },
+    { to: "/track-order", label: "Track Order" },
+    { to: "/faq", label: "Faq" },
+    { to: "/contact", label: "Contact" },
+  ];
+
   return (
     <div className="bg-gray-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,30 +22,23 @@ export default function SubHeader() {
             <span className="text-gray-800 font-semibold">Chattogram 4000</span>
           </div>
           <div className="hidden lg:flex items-center space-x-6 text-gray-600">
-            <Link
-              to="/about"
-              className="hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              About
-            </Link>
-            <Link
-              to="/track-order"
-              className="hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              Track Order
-            </Link>
-            <Link
-              to="/faq"
-              className="hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              Faq
-            </Link>
-            <Link
-              to="/contact"
-              className="hover:text-blue-600 transition-colors duration-200 font-medium"
-            >
-              contact
-            </Link>
+            {links.map((link) => {
+              const isActive =
+                pathname === link.to || pathname.startsWith(link.to + "/");
+              return (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`transition-colors duration-200 font-medium p-2 rounded-md ${
+                    isActive
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

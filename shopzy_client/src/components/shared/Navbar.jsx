@@ -79,7 +79,7 @@ export default function Navbar() {
     setIsPictureLoaded(false);
     toast.success(
       <h1 className="font-serif text-center">Logged out successfully</h1>,
-      { position: "bottom-right" }
+      { position: "bottom-right" },
     );
   };
 
@@ -218,7 +218,7 @@ export default function Navbar() {
                       <>
                         <div className="px-4 py-3 border-b border-gray-100">
                           <p className="text-sm text-gray-500">
-                            Welcome to ShopZy
+                            Welcome to ZyloCart
                           </p>
                           <p className="text-sm font-semibold text-gray-800">
                             Sign in to your account
@@ -248,7 +248,7 @@ export default function Navbar() {
 
           {/* Mobile Search Bar */}
           <div className="lg:hidden px-1 pb-4">
-            <SearchBar placeholder="Search shopZy..." />
+            <SearchBar placeholder="Search ZyloCart..." />
           </div>
         </div>
       </nav>
@@ -314,7 +314,7 @@ export default function Navbar() {
             ) : (
               <div className="p-4 bg-blue-50 border-b border-gray-200">
                 <p className="font-medium text-blue-900 mb-2">
-                  Welcome to Shopzy
+                  Welcome to ZyloCart
                 </p>
                 <div className="flex gap-2">
                   <Link

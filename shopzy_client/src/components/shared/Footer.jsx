@@ -19,14 +19,11 @@ export default function Footer() {
           {/* Brand Section - Takes more space */}
           <div className="lg:col-span-4 space-y-5">
             <Link to="/" className="inline-block">
-              <img src={logo} className="w-24" alt="shopzy logo" />
+              <img src={logo} className="w-24" alt="zylocart logo" />
             </Link>
             <div>
-              <h3 className="text-xl font-semibold mb-2">
-                Shopzy Industries Ltd.
-              </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Your trusted partner in online shopping since 1992. We deliver
+                Your trusted partner in online shopping since 2026. We deliver
                 quality products with exceptional service.
               </p>
             </div>
@@ -39,7 +36,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} className="flex-shrink-0" />
-                <span>support@shopzy.com</span>
+                <span>support@zylocart.com</span>
               </div>
               <div className="flex items-start gap-2 text-gray-400">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
@@ -249,7 +246,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400 text-center md:text-left">
-              © 2025 Shopzy Industries Ltd. All rights reserved.
+              © 2025 ZyloCart Ltd. All rights reserved.
             </p>
 
             {/* Social Links */}
