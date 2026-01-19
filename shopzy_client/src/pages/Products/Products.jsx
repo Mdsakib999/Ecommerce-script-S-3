@@ -39,9 +39,7 @@ export default function Products() {
 
   return (
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 p-4 mt-10">
-      {/* Sidebar */}
-      <aside className="w-full md:w-72 mx-auto max-w-[96] space-y-4">
-        {/* Search & Filter */}
+      <aside className="w-full md:w-72 mx-auto max-w-96 space-y-4">
         <div className="bg-white p-5 rounded-xl shadow-md border border-gray-300">
           <h3 className="text-lg font-bold tracking-tight mb-3">
             Sort & Filter
@@ -87,8 +85,8 @@ export default function Products() {
                     } else {
                       setSelectedCategories(
                         selectedCategories.filter(
-                          (name) => name !== category.name
-                        )
+                          (name) => name !== category.name,
+                        ),
                       );
                     }
                   }}
